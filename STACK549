@@ -1,0 +1,26 @@
+class Stack():
+    def __init__(self):
+        self.items = []
+    
+    def push(self, item):
+        self.items.append(item)
+    
+    def pop(self):
+        if len(self.items) > 0:
+            self.items.pop()
+        else:
+            print("Nothing to Pop")
+    
+    def peek(self):
+        if len(self.items) > 0:
+            return self.items[-1]
+        else:
+            return self.items
+    
+    def get_all(self):
+        return self.items
+
+users = Stack()
+users.pop()
+print(users.peek())
+print(users.get_all())
